@@ -17,10 +17,13 @@
         .main-container {
    
             height: calc(100vh - 70px); 
-            max-width: 60%;
+            max-width: 100%;
             display: flex;
             justify-content: center; /* Centers label horizontally */
             align-items: center;     /* Centers label vertically */
+
+            padding: 0 20px; 
+            box-sizing: border-box;
         }
        
         .label-area {
