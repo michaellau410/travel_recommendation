@@ -3,6 +3,89 @@
 <header>
     <title>Wanderlust - Your Passport to Unforgettable Journeys</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+/* Layout Wrapper with Side Gaps */
+.destinations-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: sans-serif;
+}
+
+.destinations-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #222;
+}
+
+/* Flexbox Grid Configuration */
+.destinations-grid {
+    display: flex;
+    flex-wrap: wrap;        /* Allows rows to break naturally onto new lines */
+    gap: 25px;              /* Clean gap distribution between columns and rows */
+    justify-content: center;
+}
+
+/* Individual City Card Object */
+.city-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;       /* Ensures image corners match the card radius */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    flex: 1;
+    min-width: 280px;       /* Forces mobile stacking when space gets tight */
+    max-width: 360px;       /* Limits size on high-resolution widescreen monitors */
+    display: flex;
+    flex-direction: column; /* Organizes internal picture and text layout vertically */
+    transition: transform 0.2s ease;
+}
+
+/* Subtle Interactive Hover Effect */
+.city-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Photo Container and Aspect Balancing */
+.city-photo-wrapper {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.city-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;     /* Crops image proportionally to avoid stretching */
+}
+
+/* Text Padding Area */
+.city-info {
+    padding: 20px;
+}
+
+.country-tag {
+    font-size: 11px;
+    font-weight: bold;
+    color: #007bff;
+    letter-spacing: 1px;
+}
+
+.city-card h3 {
+    margin: 5px 0 10px 0;
+    font-size: 20px;
+    color: #333;
+}
+
+/* Short Description Text Handling */
+.city-desc {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+    margin: 0;
+}
+
+
+    </style>
 </header>
 <body>
 
@@ -17,12 +100,48 @@
             </div>
     </nav>
 
-    <div class="main-container">
-        <div class="label-area">
-            <h1>Wanderlust - Your Passport to Unforgettable Journeys</h1>
-            <p>Explore the world without limits. We curate immersive, tailor-made travel experiences that turn your ultimate dream destinations into real-life memories. Start discovering hidden gems, breathtaking landscapes, and vibrant cultures with a single tap. Your next great adventure is calling!</p>
+    <div class="destinations-section">
+    <h2>Explore Popular Destinations</h2>
+    
+    <div class="destinations-grid" id="destinations-grid">
+
+        <div class="city-card">
+            <div class="city-photo-wrapper">
+                <img src="https://picsum.photos" alt="Kyoto" class="city-photo">
+            </div>
+            <div class="city-info">
+                <span class="country-tag">JAPAN</span>
+                <h3>Kyoto</h3>
+                <p class="city-desc">Experience serene bamboo forests, stunning golden pavilions, and historic tea houses in Japan’s cultural and ancient imperial heart.</p>
+            </div>
+        </div>
+
+
+        <div class="city-card">
+            <div class="city-photo-wrapper">
+                <img src="https://picsum.photos" alt="Rome" class="city-photo">
+            </div>
+            <div class="city-info">
+                <span class="country-tag">ITALY</span>
+                <h3>Rome</h3>
+                <p class="city-desc">Step back into history exploring ancient architectural wonders like the Colosseum while enjoying world-class authentic Italian espresso and cuisine.</p>
+            </div>
+        </div>
+
+
+        <div class="city-card">
+            <div class="city-photo-wrapper">
+                <img src="https://picsum.photos" alt="Cape Town" class="city-photo">
+            </div>
+            <div class="city-info">
+                <span class="country-tag">SOUTH AFRICA</span>
+                <h3>Cape Town</h3>
+                <p class="city-desc">Discover dramatic coastlines, vibrant cultural harbor fronts, and panoramic mountain views where stunning oceans meet striking vineyard terrains.</p>
+            </div>
         </div>
     </div>
+</div>
+<script src="travel_recommendation.js"></script>
 
 </body>
 </html>
