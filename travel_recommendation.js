@@ -29,9 +29,18 @@ function searchDest()
 		    const key = Object.keys(data).find(item => item.toLowerCase() === handleInput(input));
 			if (key)
             {
-                const selectedArray = data[key];
-                for(const item of selectedArray)
+                let selectedArray;
+
+                if(key === "countries")
                 {
+                    const countriesdArray = data.countries;
+
+                    for(const item of countriesdArray)
+                    {
+                        selectedArray = item.cities;
+
+                        for(const item of selectedArray)
+                    {
                     //console.log(item.name);
 
                     let appended = `<div class="city-card">`
@@ -46,7 +55,45 @@ function searchDest()
 
                     destinations.innerHTML += appended;
                     
+                    }
+
+
+                        //citiesArray.forEach(element => {
+                        //    console.log(element.name);
+                        //});  
+
+                        //let selectedArray = item.forEach(element => {
+                            //console.log(item.cities);
+                        //});
+                    }
+
+                    
                 }
+                else
+                {
+                    selectedArray = data[key];
+
+                    for(const item of selectedArray)
+                    {
+                    //console.log(item.name);
+
+                    let appended = `<div class="city-card">`
+                    + `<div class="city-photo-wrapper">`
+                    + `<img src="${item.imageUrl}" alt="${item.name}" class="city-photo">`
+                    + `</div>`
+                    + `<div class="city-info">`
+                    + `<h3>${item.name}</h3>`
+                    + `<p class="city-desc">${item.description}</p>`
+                    + `</div>`
+                    + `</div>`;
+
+                    destinations.innerHTML += appended;
+                    
+                    }
+                }
+
+                
+                
 
 
             } else {
