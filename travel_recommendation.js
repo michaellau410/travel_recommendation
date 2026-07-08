@@ -1,4 +1,5 @@
 const btnSearch = document.getElementById('btnSearch');
+const btnReset = document.getElementById('btnReset');
 
 function handleInput(userInput)
 {
@@ -59,3 +60,15 @@ function searchDest()
 }
 	
 btnSearch.addEventListener('click', searchDest);
+
+
+function searchReset()
+{
+	document.getElementById('searchInput').value = '';
+	
+	document.getElementById('destinations-grid').innerHTML = '';
+}
+
+btnReset.addEventListener('click', searchReset);
+
+
