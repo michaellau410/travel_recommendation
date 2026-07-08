@@ -18,7 +18,7 @@ function handleInput(userInput)
 function searchDest()
 {
 	const input = document.getElementById('searchInput').value.toLowerCase();
-    console.log("search input" + input);
+    //console.log("search input" + input);
 	const destinations = document.getElementById('destinations-grid');
 	destinations.innerHTML = '';
 
@@ -32,7 +32,7 @@ function searchDest()
                 const selectedArray = data[key];
                 for(const item of selectedArray)
                 {
-                    console.log(item.name);
+                    //console.log(item.name);
 
                     let appended = `<div class="city-card">`
                     + `<div class="city-photo-wrapper">`
