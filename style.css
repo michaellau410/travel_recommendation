@@ -15,7 +15,7 @@
         }
 
         .main-container {
-            /* Calculates remaining height: Full screen minus estimated navbar height */
+   
             height: calc(100vh - 70px); 
             max-width: 40%;
             display: flex;
@@ -40,19 +40,17 @@
             box-sizing: border-box; 
         }
 
-        /* Logo/Brand Styling */
-        .navbar-logo {
+        .navbar a {
             color: white;
-            font-size: 24px;
-            font-weight: bold;
-            text-decoration: none;
+               padding: 5px 10px; /* Adds invisible clickable padding around the text */
         }
 
-        /* 2. Button Group Push Mechanism */
+
+
         .navbar-buttons {
             margin-left: auto;           /* Pushes this container completely to the right */
             display: flex;
-            gap: 15px;                   /* Adds clean spacing between the buttons */
+            gap: 30px;                   /* Adds clean spacing between the buttons */
         }
 
         /* Button Styling */

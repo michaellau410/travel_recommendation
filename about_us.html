@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <title>Wanderlust - Your Passport to Unforgettable Journeys</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+/* Container for the whole team area */
+.team-section {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.team-section h3 {
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* 3-Column Flexbox Layout Grid */
+.team-container {
+    display: flex;
+    flex-wrap: wrap;       /* Allows cards to wrap onto new lines on small screens */
+    gap: 20px;             /* Spacing between member cards */
+    justify-content: center;
+}
+
+/* Individual Card Styling */
+.member-card {
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 25px 20px;
+    flex: 1;               /* Makes cards expand equally */
+    min-width: 200px;      /* Prevents cards from getting too narrow */
+    max-width: 250px;      /* Prevents cards from getting too wide */
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Placeholder Avatar Circle */
+.member-avatar {
+    width: 80px;
+    height: 80px;
+    background-color: #e2e8f0;
+    border-radius: 50%;
+    margin: 0 auto 15px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;       /* Temporary size for the emoji icons */
+}
+
+.member-card h4 {
+    margin: 10px 0 5px 0;
+    color: #222;
+}
+
+.member-role {
+    font-size: 14px;
+    color: #007bff;        /* Highlights the job title color */
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.member-bio {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.4;
+    margin: 0;
+}
+
+
+    </style>
+</header>
+<body>
+
+     <nav class="navbar">
+            <div>
+                <a href="./travel_recommendationindex.html">Home </a>
+        <a href="./about_us.html">About Us</a>
+        <a href="./contact_us.html">Contact Us</a>
+      
+            </div>
+    </nav>
+
+    <div class="main-container" style="max-width: 80%;">
+        <div class="label-area">
+            <h1>About Us</h1>
+       
+<p class="company-desc">
+    Welcome to Wanderlust, your trusted companion in exploring the globe. We are a team of passionate travel enthusiasts and destination experts dedicated to transforming how you experience the world. 
+</p> <p class="company-desc">    
+    Our mission is to take the stress out of planning so you can focus entirely on creating lasting, meaningful memories.At Wanderlust, we believe that traveling is about more than just visiting a location
+    
+</p>
+
+<div class="team-section">
+    <h3>Our Team</h3>
+    
+    <div class="team-container">
+        <!-- Member 1: Tour Planning -->
+        <div class="member-card">
+            <div class="member-avatar">🗺️</div>
+            <h4>Jane Doe</h4>
+            <p class="member-role">Chief Travel Strategist</p>
+            <p class="member-bio">Jane designs our exclusive custom itineraries and handles global partner relations.</p>
+        </div>
+    
+        <!-- Member 2: Operations / Guides -->
+        <div class="member-card">
+            <div class="member-avatar">🧳</div>
+            <h4>John Smith</h4>
+            <p class="member-role">Director of Tour Operations</p>
+            <p class="member-bio">John coordinates logistics, booking schedules, and manages our local expert guides.</p>
+        </div>
+    
+        <!-- Member 3: Support / Consultation -->
+        <div class="member-card">
+            <div class="member-avatar">✈️</div>
+            <h4>Alex Jones</h4>
+            <p class="member-role">Lead Destination Consultant</p>
+            <p class="member-bio">Alex works directly with clients to find the perfect flight routes and holiday packages.</p>
+        </div>
+    </div>
+    
+</div>
+
+        
+        </div>
+    </div>
+
+</body>
+</html>

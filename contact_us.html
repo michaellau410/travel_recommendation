@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <title>Wanderlust - Your Passport to Unforgettable Journeys</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* --- Updated Label Area & New Form Styles --- */
+        .label-area {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            width: 100%;
+            max-width: 400px; /* Limits form width so it doesn't get too wide on desktop */
+            box-sizing: border-box;
+        }
+
+        .label-area h2 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+        }
+
+        /* Form Layout Mechanics */
+        .custom-form {
+            display: flex;
+            flex-direction: column; /* Stacks elements vertically */
+            gap: 15px;              /* Creates uniform space between form fields */
+        }
+
+        /* Styling for Form Fields */
+        .custom-form input[type="text"],
+        .custom-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box; /* Prevents padding from breaking width */
+            font-family: inherit;   /* Ensures textarea uses the body font */
+        }
+
+        /* Specific rule for the Textarea height */
+        .custom-form textarea {
+            height: 120px;
+            resize: vertical;       /* Allows user to resize height, but not width */
+        }
+
+        /* Submit Button Styling */
+        .submit-btn {
+            background-color: #28a745; /* Clean green color for success/submit */
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</header>
+<body>
+
+     <nav class="navbar">
+            <div>
+                <a href="./travel_recommendationindex.html">Home </a>
+        <a href="./about_us.html">About Us</a>
+        <a href="./contact_us.html">Contact Us</a>
+      
+            </div>
+    </nav>
+
+    <div class="main-container"  style="max-width: 80%;">
+        <div class="label-area">
+            <h2>Contact Us</h2>
+            
+            <!-- New Form Setup -->
+            <form class="custom-form" action="#" method="POST">
+                <input type="text" name="username" placeholder="Your Name" required>
+                
+                <textarea name="message" placeholder="Your Message Here..." required></textarea>
+                
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+
+        </div>
+
+
+    </div>
+
+</body>
+</html>
