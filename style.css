@@ -5,24 +5,69 @@
         }
 
         body {
-            
-            background-image: "./background.jpg"
+            background-image: url("./background.jpg");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             background-attachment: fixed;
 
-            display: flex;
-            justify-content: center;         /* Centers content horizontally */
-            align-items: center;             /* Centers content vertically */
+           
         }
 
+        .main-container {
+            /* Calculates remaining height: Full screen minus estimated navbar height */
+            height: calc(100vh - 70px); 
+            max-width: 40%;
+            display: flex;
+            justify-content: left; /* Centers label horizontally */
+            align-items: center;     /* Centers label vertically */
+        }
        
-        .main-area {
-            background-color: rgba(255, 255, 255, 0.85); 
-            padding: 30px 50px;
+        .label-area {
+            background-color: rgba(255, 255, 255, 0.6);
+            padding: 40px;
             border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            text-align: center;
-            font-family: sans-serif;
+            text-align: left;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            background-color: #333;
+            padding: 15px 20px;
+            /* Box-sizing ensures padding doesn't push the 100% width off screen */
+            box-sizing: border-box; 
+        }
+
+        /* Logo/Brand Styling */
+        .navbar-logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        /* 2. Button Group Push Mechanism */
+        .navbar-buttons {
+            margin-left: auto;           /* Pushes this container completely to the right */
+            display: flex;
+            gap: 15px;                   /* Adds clean spacing between the buttons */
+        }
+
+        /* Button Styling */
+        .nav-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;       /* In case you use <a> tags instead of <button> */
+            font-size: 14px;
+        }
+
+        /* Hover Effect for Buttons */
+        .nav-btn:hover {
+            background-color: #0056b3;
         }
