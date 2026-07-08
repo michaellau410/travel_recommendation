@@ -17,9 +17,9 @@
         .main-container {
    
             height: calc(100vh - 70px); 
-            max-width: 40%;
+            max-width: 60%;
             display: flex;
-            justify-content: left; /* Centers label horizontally */
+            justify-content: center; /* Centers label horizontally */
             align-items: center;     /* Centers label vertically */
         }
        
