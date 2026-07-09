@@ -4,7 +4,7 @@
     <title>Wanderlust - Your Passport to Unforgettable Journeys</title>
     <link rel="stylesheet" href="style.css">
     <style>
-/* Container for the whole team area */
+
 .team-section {
     margin-top: 40px;
     text-align: center;
@@ -15,28 +15,26 @@
     color: #333;
 }
 
-/* 3-Column Flexbox Layout Grid */
+
 .team-container {
     display: flex;
-    flex-wrap: wrap;       /* Allows cards to wrap onto new lines on small screens */
-    gap: 20px;             /* Spacing between member cards */
+    flex-wrap: wrap;
+    gap: 20px;      
     justify-content: center;
 }
 
-/* Individual Card Styling */
 .member-card {
     background-color: #f9f9f9;
     border: 1px solid #eee;
     border-radius: 8px;
     padding: 25px 20px;
-    flex: 1;               /* Makes cards expand equally */
-    min-width: 200px;      /* Prevents cards from getting too narrow */
-    max-width: 250px;      /* Prevents cards from getting too wide */
+    flex: 1;               
+    min-width: 200px;
+    max-width: 250px;
     box-sizing: border-box;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-/* Placeholder Avatar Circle */
 .member-avatar {
     width: 80px;
     height: 80px;
@@ -46,7 +44,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 32px;       /* Temporary size for the emoji icons */
+    font-size: 32px; 
 }
 
 .member-card h4 {
@@ -56,7 +54,7 @@
 
 .member-role {
     font-size: 14px;
-    color: #007bff;        /* Highlights the job title color */
+    color: #007bff;
     font-weight: bold;
     margin-bottom: 15px;
 }
@@ -73,13 +71,19 @@
 </header>
 <body>
 
-     <nav class="navbar">
-            <div>
-                <a href="./index.html">Home</a>
-        <a href="./about_us.html">About Us</a>
-        <a href="./contact_us.html">Contact Us</a>
-      
-            </div>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="#" class="navbar-logo"></a>
+        </div>
+
+        <div class="navbar-center">
+            <a href="./travel_recommendation.html">Home</a>
+            <a href="./about_us.html">About Us</a>
+            <a href="./contact_us.html">Contact Us</a>
+        </div>
+
+        <div class="navbar-right">
+        </div>
     </nav>
 
     <div class="main-container">
@@ -97,7 +101,7 @@
     <h3>Our Team</h3>
     
     <div class="team-container">
-        <!-- Member 1: Tour Planning -->
+
         <div class="member-card">
             <div class="member-avatar">🗺️</div>
             <h4>Jane Doe</h4>
@@ -105,7 +109,7 @@
             <p class="member-bio">Jane designs our exclusive custom itineraries and handles global partner relations.</p>
         </div>
     
-        <!-- Member 2: Operations / Guides -->
+
         <div class="member-card">
             <div class="member-avatar">🧳</div>
             <h4>John Smith</h4>
@@ -113,7 +117,6 @@
             <p class="member-bio">John coordinates logistics, booking schedules, and manages our local expert guides.</p>
         </div>
     
-        <!-- Member 3: Support / Consultation -->
         <div class="member-card">
             <div class="member-avatar">✈️</div>
             <h4>Alex Jones</h4>

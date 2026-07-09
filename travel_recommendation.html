@@ -4,7 +4,7 @@
     <title>Wanderlust - Your Passport to Unforgettable Journeys</title>
     <link rel="stylesheet" href="style.css">
     <style>
-/* Layout Wrapper with Side Gaps */
+
 .destinations-section {
     max-width: 1200px;
     margin: 40px auto;
@@ -18,34 +18,32 @@
     color: #222;
 }
 
-/* Flexbox Grid Configuration */
+
 .destinations-grid {
     display: flex;
-    flex-wrap: wrap;        /* Allows rows to break naturally onto new lines */
-    gap: 25px;              /* Clean gap distribution between columns and rows */
+    flex-wrap: wrap; 
+    gap: 25px;
     justify-content: center;
 }
 
-/* Individual City Card Object */
+
 .city-card {
     background-color: #ffffff;
     border-radius: 12px;
-    overflow: hidden;       /* Ensures image corners match the card radius */
+    overflow: hidden;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     flex: 1;
-    min-width: 280px;       /* Forces mobile stacking when space gets tight */
-    max-width: 360px;       /* Limits size on high-resolution widescreen monitors */
+    min-width: 280px;
+    max-width: 360px;
     display: flex;
-    flex-direction: column; /* Organizes internal picture and text layout vertically */
+    flex-direction: column;
     transition: transform 0.2s ease;
 }
 
-/* Subtle Interactive Hover Effect */
 .city-card:hover {
     transform: translateY(-5px);
 }
 
-/* Photo Container and Aspect Balancing */
 .city-photo-wrapper {
     width: 100%;
     height: 200px;
@@ -55,10 +53,10 @@
 .city-photo {
     width: 100%;
     height: 100%;
-    object-fit: cover;     /* Crops image proportionally to avoid stretching */
+    object-fit: cover;
 }
 
-/* Text Padding Area */
+
 .city-info {
     padding: 20px;
 }
@@ -76,7 +74,6 @@
     color: #333;
 }
 
-/* Short Description Text Handling */
 .city-desc {
     font-size: 14px;
     color: #666;
@@ -85,28 +82,82 @@
 }
 
 
+.page-layout {
+    display: flex;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 20px auto; 
+    padding: 0 20px; 
+    box-sizing: border-box;
+}
+
+.main-container {
+    flex: 1;                 
+    min-width: 320px;        
+
+    position: -webkit-sticky;
+    position: sticky;
+    top: 30px;
+}
+
+
+.destinations-section {
+    flex: 2;
+    margin: 0;
+    padding: 0;
+}
+
+
+@media (max-width: 900px) {
+    .page-layout {
+        flex-direction: column;
+    }
+    
+    .destinations-section {
+        margin-top: 30px;
+    }
+
+
+
     </style>
 </header>
 <body>
 
      <nav class="navbar">
-            <div>
-                <a href="./index.html">Home</a>
-         <a href="./about_us.html">About Us</a>
-        <a href="./contact_us.html">Contact Us</a>
-        <input type="text" id="searchInput" placeholder="Enter a destination or keyword"> 
-        <button class="nav-btn" id="btnSearch">Search</button>
-        <button class="nav-btn" id="btnReset">Reset</button>
-            </div>
+        <div class="navbar-left">
+            <a href="#" class="navbar-logo"></a>
+        </div>
+
+        <div class="navbar-center">
+            <a href="./travel_recommendation.html">Home</a>
+            <a href="./about_us.html">About Us</a>
+            <a href="./contact_us.html">Contact Us</a>
+        </div>
+
+        <div class="navbar-right">
+            <input type="text" id="searchInput"  class="search-input"  placeholder="Enter a destination or keyword"> 
+            <button class="nav-btn" id="btnSearch">Search</button>
+            <button class="nav-btn" id="btnReset">Reset</button>
+        </div>
     </nav>
 
-    <div class="destinations-section">
-    <h2>Search Results</h2>
-    
-    <div class="destinations-grid" id="destinations-grid">
+    <div class="page-layout">
 
-        
+        <div class="main-container" >
+            <div class="label-area">
+                <h1>Wanderlust - Your Passport to Unforgettable Journeys</h1>
+                <p>Explore the world without limits. We curate immersive, tailor-made travel experiences that turn your ultimate dream destinations into real-life memories. Start discovering hidden gems, breathtaking landscapes, and vibrant cultures with a single tap. Your next great adventure is calling!</p>
+            </div>
+        </div>
+    
+        <div class="destinations-section">
+            <div class="destinations-grid" id="destinations-grid">
+        </div>
+    
     </div>
+   
+
+
 </div>
 <script src="travel_recommendation.js"></script>
 

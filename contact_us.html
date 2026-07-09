@@ -22,34 +22,32 @@
             text-align: center;
         }
 
-        /* Form Layout Mechanics */
         .custom-form {
             display: flex;
-            flex-direction: column; /* Stacks elements vertically */
-            gap: 15px;              /* Creates uniform space between form fields */
+            flex-direction: column;
+            gap: 15px;
         }
 
-        /* Styling for Form Fields */
-        .custom-form input[type="text"],
-        .custom-form textarea {
+
+        .custom-form input[type="text"], .custom-form textarea {
             width: 100%;
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
             font-size: 14px;
-            box-sizing: border-box; /* Prevents padding from breaking width */
-            font-family: inherit;   /* Ensures textarea uses the body font */
+            box-sizing: border-box;
+            font-family: inherit;
         }
 
-        /* Specific rule for the Textarea height */
+
         .custom-form textarea {
             height: 120px;
-            resize: vertical;       /* Allows user to resize height, but not width */
+            resize: vertical;
         }
 
-        /* Submit Button Styling */
+
         .submit-btn {
-            background-color: #28a745; /* Clean green color for success/submit */
+            background-color: #28a745;
             color: white;
             border: none;
             padding: 12px;
@@ -67,23 +65,28 @@
 </header>
 <body>
 
-     <nav class="navbar">
-            <div>
-                <a href="./index.html">Home</a>
-        <a href="./about_us.html">About Us</a>
-        <a href="./contact_us.html">Contact Us</a>
-      
-            </div>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="#" class="navbar-logo"></a>
+        </div>
+
+        <div class="navbar-center">
+            <a href="./travel_recommendation.html">Home</a>
+            <a href="./about_us.html">About Us</a>
+            <a href="./contact_us.html">Contact Us</a>
+        </div>
+
+        <div class="navbar-right">
+        </div>
     </nav>
 
     <div class="main-container">
         <div class="label-area">
             <h2>Contact Us</h2>
             
-            <!-- New Form Setup -->
             <form class="custom-form" action="#" method="POST">
                 <input type="text" name="username" placeholder="Your Name" required>
-                
+                <input type="text" name="email" placeholder="Your e-Mail" required>
                 <textarea name="message" placeholder="Your Message Here..." required></textarea>
                 
                 <button type="submit" class="submit-btn">Submit</button>

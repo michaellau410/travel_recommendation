@@ -19,23 +19,26 @@ function handleInput(userInput)
 function createCityCard(item)
 {
     return `<div class="city-card">`
-                            + `<div class="city-photo-wrapper">`
-                            + `<img src="${item.imageUrl}" alt="${item.name}" class="city-photo">`
-                            + `</div>`
-                            + `<div class="city-info">`
-                            + `<h3>${item.name}</h3>`
-                            + `<p class="city-desc">${item.description}</p>`
-                            + `</div>`
-                            + `</div>`;
+        + `<div class="city-photo-wrapper">`
+        + `<img src="${item.imageUrl}" alt="${item.name}" class="city-photo">`
+        + `</div>`
+        + `<div class="city-info">`
+        + `<h3>${item.name}</h3>`
+        + `<p class="city-desc">${item.description}</p>`
+        + `</div>`
+        + `</div>`;
     
 }
 
 function searchDest()
 {
 	const input = document.getElementById('searchInput').value.toLowerCase();
-    //console.log("search input" + input);
 	const destinations = document.getElementById('destinations-grid');
-	destinations.innerHTML = '';
+
+    if(input.trim() === '')
+        return;
+
+    destinations.innerHTML = '';
 
 	fetch('travel_recommendation_api.json')
 	  .then(response => response.json())
@@ -61,11 +64,6 @@ function searchDest()
                         destinations.innerHTML += createCityCard(item);
                     }
                 }
-
-                
-                
-
-
             } else {
                 destinations.innerHTML = 'No Result.';
 			}
