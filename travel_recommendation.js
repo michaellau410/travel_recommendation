@@ -65,13 +65,15 @@ function searchDest()
                     }
                 }
             } else {
-                destinations.innerHTML = 'No Result.';
+                destinations.innerHTML = '';
+                console.log('Search No result')
 			}
 		})
 		.catch(error => {
+            console.log('An error occurred while fetching data.')
 			console.error('Error:', error);
-			destinations.innerHTML = 'An error occurred while fetching data.';
-		});
+			destinations.innerHTML = '';
+         });
 }
 	
 btnSearch.addEventListener('click', searchDest);
