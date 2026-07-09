@@ -40,7 +40,7 @@ function searchDest()
 
     destinations.innerHTML = '';
 
-	fetch('travel_recommendation_api.json')
+	fetch('resources/travel_recommendation_api.json')
 	  .then(response => response.json())
 	  .then(data => 
         {
